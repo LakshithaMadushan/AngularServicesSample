@@ -11,6 +11,9 @@ export class SecondComponentComponent implements OnInit {
   secondTxt: string;
 
   constructor(private  ts: TestServiceService) {
+    setInterval(() => {
+      this.secondTxt = ts.getText();
+    }, 5000);
   }
 
   ngOnInit() {
